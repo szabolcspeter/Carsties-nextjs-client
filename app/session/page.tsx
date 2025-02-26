@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import Heading from "../components/Heading";
+import AuthTest from "./AuthTest";
 
 export default async function Session() {
     const session = await auth();
@@ -13,9 +14,9 @@ export default async function Session() {
                 <pre className='whitespace-pre-wrap break-all'>{JSON.stringify(session, null, 2)}</pre>
             </div>
 
-            {/* <div className='mt-4'>
+            <div className='mt-4'>
                 <AuthTest />
-            </div> */}
+            </div>
         </div>
     );
 }
